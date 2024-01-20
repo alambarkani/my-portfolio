@@ -44,3 +44,17 @@ themeToggleBtn.addEventListener('click', function() {
     }
     
 });
+
+
+function handleScroll(){
+    var scrollPosition = window.scrollY;
+    const nav = document.getElementById('top-navbar');
+
+    if(scrollPosition>0){
+        nav.classList.add('fixed')
+    }else{
+        nav.classList.remove('fixed')
+    }
+}
+
+window.addEventListener('scroll', handleScroll)

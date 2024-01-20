@@ -23,3 +23,46 @@ app.use('/profile', profileRouter.cv)
 app.listen(port, () =>{
     console.log(`Server running on http://localhost:${port}`)
 })
+
+//create connection to postgresql database
+/* const { Pool, Client } = require('pg');
+
+const pool = new Pool({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'mydb',
+  password: 'password',
+  port: 5432,
+});
+
+const client = new Client({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'mydb',
+  password: 'password',
+  port: 5432,
+});
+
+client.connect();
+
+client.query('SELECT NOW()', (err, res) => {
+  console.log(err, res);
+  client.end();
+});
+
+pool.query('SELECT NOW()', (err, res) => {
+  console.log(err, res);
+  pool.end();
+}); */
+
+//create consuming external api
+/* const axios = require("axios");
+
+axios
+  .get("https://jsonplaceholder.typicode.com/todos/1")
+  .then((response) => {
+    console.log(response.data);
+  })
+  .catch((error) => {
+    console.log(error);
+  }); */
